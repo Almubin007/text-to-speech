@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icons/favicon.png" type="image/x-icon">
+    <title>text-to-speech</title>
+</head>
+
+<body onload="textToAudio()">
+    <header>
+        <div class="header-item">
+            <h1>Text To Speech</h1>
+           
+            <img src="icons/bars-solid.svg" id="menu-icon" class="menu-icon" alt="menu" />
+        </div>
+    </header>
+    <center> <div class="message">
+        <h1><center>Hey there, Easily convert your texts to speech</center></h1>
+     </div></center>
+    
+    <main>
+        <div class="container">
+            <div class="form">
+                <div>
+                    <h2>Select Voice</h2>
+                    <select id="voices" class="form-select bg-secondary text-light"></select>
+                </div>
+
+                <div>
+                    <h2>Message</h2>
+                    <textarea id="input-text" placeholder="Enter Text" cols="40%" rows="11%"></textarea>
+
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <h2>Volume</h2>
+                    <input type="range" min="1" max="10" value="5" id="volumeRange">
+                </div>
+
+                <div>
+                    <h2>Rate</h2>
+                    <input type="range" min="1" max="10" value="5" id="rateRange">
+                </div>
+
+                <div>
+                    <h2>Pitch</h2>
+                    <input type="range" min="1" max="20" value="10" id="pitchRange">
+                </div>
+
+                <div>
+                    <button onclick="textToAudio()">Speech</button>
+                    <button onclick="reset()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        
+
+    
+    <script src="script.js"></script>
+
+</body>
+
+</html>
